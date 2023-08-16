@@ -15,7 +15,7 @@ const app = express()
 
 // Middleware to enable CORS
 app.use(cors(
-    { origin: "https://bdev-pokemon.onrender.com", credentials: true, } //server accepts requests from static site
+    { origin: "https://bdev-saitama.onrender.com", credentials: true, } //server accepts requests from static site
 ))
 
 app.use((req, res, next) => {
