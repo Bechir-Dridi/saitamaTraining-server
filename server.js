@@ -15,7 +15,7 @@ const app = express()
 
 // Middleware to enable CORS
 app.use(cors(
-    { origin: ["http://localhost:3000", "https://saitama-server.onrender.com"], credentials: true, } //server accepts requests from loclahost 3000 and static site
+    { origin: ["http://localhost:3000", "https://bdev-saitama.netlify.app"], credentials: true, } //server accepts requests from loclahost 3000 and static site
 ))
 
 app.use((req, res, next) => {
