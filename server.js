@@ -14,14 +14,10 @@ const app = express()
 //middleware:
 
 // Middleware to enable CORS
-// app.use(cors(
-//     { origin: ["http://localhost:3000", "https://bdev-saitama.netlify.app"], credentials: true, } //server accepts requests from loclahost 3000 and static site
-// ))
-
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "https://bdev-saitama.netlify.app");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS"); // Add any other methods your app uses
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
 
     if (req.method === "OPTIONS") {
         res.sendStatus(200);
