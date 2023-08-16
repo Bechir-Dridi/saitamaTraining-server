@@ -2,6 +2,7 @@ const express = require("express")
 require("dotenv").config()
 const workoutRoutes = require("./routes/workouts")
 const mongoose = require("mongoose")
+const cors = require("cors")
 //import userRoute
 const userRoutes = require("./routes/user")
 
@@ -13,6 +14,10 @@ const app = express()
 //middleware:
 
 // Middleware to enable CORS
+app.use(cors(
+    { origin: ["http://localhost:3000", "https://bdev-pokemon.onrender.com"], credentials: true, } //server accepts requests from loclahost 3000 and static site
+))
+
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
