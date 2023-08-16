@@ -15,7 +15,7 @@ const app = express()
 // Middleware to enable CORS
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'https://bdev-saitama.netlify.app');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, DELETE, PUT OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     next();
 });
