@@ -15,7 +15,7 @@ const app = express()
 
 // Middleware to enable CORS
 app.use(cors(
-    { origin: "https://bdev-saitama.netlify.app", credentials: true, } //server accepts requests from static site
+    { origin: ["http://localhost:3000", "https://bdev-saitama.netlify.app"], credentials: true, } //server accepts requests from static site
 ))
 
 
