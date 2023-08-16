@@ -15,20 +15,9 @@ const app = express()
 
 // Middleware to enable CORS
 app.use(cors(
-    { origin: "https://bdev-saitama.onrender.com", credentials: true, } //server accepts requests from static site
+    { origin: "https://bdev-saitama.netlify.app", credentials: true, } //server accepts requests from static site
 ))
 
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-
-    if (req.method === "OPTIONS") {
-        res.sendStatus(200);
-    } else {
-        next();
-    }
-});
 
 app.use((req, res, next) => {
     console.log(req.path, req.method)
