@@ -15,7 +15,7 @@ const app = express()
 
 // Middleware to enable CORS
 app.use(cors(
-    { origin: ["http://localhost:3000", "https://bdev-pokemon.onrender.com"], credentials: true, } //server accepts requests from loclahost 3000 and static site
+    { origin: "https://bdev-pokemon.onrender.com", credentials: true, } //server accepts requests from static site
 ))
 
 app.use((req, res, next) => {
