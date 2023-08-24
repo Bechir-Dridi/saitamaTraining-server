@@ -24,9 +24,8 @@ app.use((req, res, next) => {
     next()
 })
 
+//incoming req with a JSON payload, the JSON data will be parsed and available as `req.body` in your route handlers.
 app.use(express.json())
-
-
 
 
 //routes:
