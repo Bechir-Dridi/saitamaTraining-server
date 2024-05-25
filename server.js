@@ -1,6 +1,6 @@
-// developed by "Bechir Dridi"
-// Portfolio: https://bechirdev.netlify.app
-// twitter:   https://twitter.com/bechir7dridi
+// developed by "Bechir Dridi" -->
+// Portfolio: https://bechirdev.vercel.app 
+// twitter:   https://twitter.com/bechir7dridi 
 // linkedin:  https://linkedin.com/in/bechir-dev/
 // github:    https://github.com/Bechir-Dridi
 const express = require("express")
@@ -20,7 +20,7 @@ const app = express()
 
 // Middleware to enable CORS
 app.use(cors(
-    { origin: ["http://localhost:3000", "https://bdev-saitama.netlify.app"], credentials: true, } //server accepts requests from static site
+    { origin: "https://bdev-saitama.vercel.app", credentials: true, } //server accepts requests from static site
 ))
 
 
